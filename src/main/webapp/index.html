@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Etiquetas meta para definir el juego de caracteres y la escala inicial -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aceptar Cookies</title>
+    <!-- Estilos CSS -->
     <style>
         /* Estilos CSS */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: Arial, sans-serif; /* Fuente y familia de fuentes para el cuerpo */
+            background-color: #f0f0f0; /* Color de fondo */
+            margin: 0; /* Eliminar márgenes predeterminados */
+            padding: 0; /* Eliminar relleno predeterminado */
+            display: flex; /* Mostrar los elementos como una fila */
+            justify-content: center; /* Centrar horizontalmente los elementos */
+            align-items: center; /* Centrar verticalmente los elementos */
+            height: 100vh; /* Establecer la altura del cuerpo como el 100% del viewport height */
         }
         .container {
-            max-width: 400px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px; /* Ancho máximo del contenedor */
+            padding: 20px; /* Relleno interior */
+            background-color: #fff; /* Color de fondo del contenedor */
+            border-radius: 5px; /* Radio de borde para suavizar los bordes */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
         }
         h2 {
-            text-align: center;
-            margin-bottom: 20px;
+            text-align: center; /* Centrar el texto */
+            margin-bottom: 20px; /* Espacio inferior */
         }
         p {
-            text-align: center;
-            margin-bottom: 20px;
+            text-align: center; /* Centrar el texto */
+            margin-bottom: 20px; /* Espacio inferior */
         }
         .btn {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            display: block; /* Mostrar como bloque para ocupar el ancho completo */
+            width: 100%; /* Ancho completo */
+            padding: 10px; /* Relleno */
+            background-color: #007bff; /* Color de fondo del botón */
+            color: #fff; /* Color del texto del botón */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Radio de borde para suavizar los bordes */
+            cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
         }
         .btn:hover {
-            background-color: #0056b3;
+            background-color: #0056b3; /* Cambiar color de fondo al pasar sobre el botón */
         }
     </style>
 </head>
@@ -50,8 +52,9 @@
 <div class="container">
     <h2>Aceptar Cookies</h2>
     <p>Este sitio web utiliza cookies para mejorar tu experiencia. Por favor, acepta nuestras cookies para continuar.</p>
+    <!-- Formulario para aceptar cookies -->
     <form action="Servlet" method="post">
-        <button type="submit" class="btn">Aceptar Cookies</button>
+        <button type="submit" class="btn">Aceptar Cookies</button> <!-- Botón para aceptar cookies -->
     </form>
 </div>
 </body>

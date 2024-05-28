@@ -1,5 +1,11 @@
+/*
+ * Autor: Joel Caza
+ * Fecha: 27/05/2024
+ * Materia: Lenguajes de Programacion
+ *
+ * */
 
-
+// Importaciones Necesarias
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.Cookie;
@@ -12,11 +18,14 @@ import java.io.PrintWriter;
 @WebServlet("/Servlet")
 public class Servlet extends HttpServlet {
 
+    // Método para manejar las solicitudes GET
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // Contador de visitas
         int visitCount = 0;
         Cookie[] cookies = req.getCookies();
 
+        // Buscar la cookie de visitCount
         if (cookies != null) {
             for (Cookie cookie : cookies) {
                 if (cookie.getName().equals("visitCount")) {
@@ -28,12 +37,15 @@ public class Servlet extends HttpServlet {
 
         visitCount++;
 
+        // Crear y agregar la cookie de visitCount
         Cookie visitCountCookie = new Cookie("visitCount", String.valueOf(visitCount));
         resp.addCookie(visitCountCookie);
 
+        // Configurar la respuesta HTTP
         resp.setContentType("text/html;charset=UTF-8");
         PrintWriter out = resp.getWriter();
 
+        // Generar la página HTML de respuesta
         out.println("<!DOCTYPE html>");
         out.println("<html>");
         out.println("<head>");
@@ -63,8 +75,4 @@ public class Servlet extends HttpServlet {
         out.println("</html>");
     }
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        doGet(req, resp);
-    }
 }
